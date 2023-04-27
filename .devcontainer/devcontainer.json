@@ -1,0 +1,13 @@
+{
+	"dockerComposeFile": "docker-compose.yml",
+	"service": "dev",
+	"workspaceFolder": "/workspace",
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"HashiCorp.terraform",
+				"GitHub.copilot"
+			]
+		}
+	}
+}

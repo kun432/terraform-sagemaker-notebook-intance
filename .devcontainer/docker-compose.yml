@@ -1,0 +1,18 @@
+version: '3'
+services:
+  dev:
+    build:
+      context: ../
+      dockerfile: .devcontainer/Dockerfile
+      args:
+        TERRAFORM_VERSION: "1.4.6"
+        TERRAGRUNT_VERSION: "0.45.4"
+        TFLINT_VERSION: "0.46.1"
+        TFUPDATE_VERSION: "0.6.7"
+    volumes:
+      - ~/.gitconfig:/home/vscode/.gitconfig
+      - ~/.aws:/home/vscode/.aws
+      - ~/.terraform.d/plugin-cache:/home/vscode/.terraform-plugin-cache
+      - ~/.tflint.d/plugins:/home/vscode/.tflint-plugin-cache
+      - ..:/workspace:cached
+    command: sleep infinity

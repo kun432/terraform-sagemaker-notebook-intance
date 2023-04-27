@@ -12,6 +12,10 @@ ENV LANG="ja_JP.UTF-8"
 ENV LANGUAGE="ja_JP:ja"
 ENV LC_ALL="ja_JP.UTF-8"
 
+RUN curl -sSL -o /tmp/awscliv2.zip "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" \
+    && unzip /tmp/awscliv2.zip -d /tmp \
+    && /tmp/aws/install
+
 USER vscode
 ENV HOME /home/vscode
 

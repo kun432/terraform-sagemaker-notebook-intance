@@ -1,16 +1,8 @@
-# terraform-devcontainer-boilerplate
+# terraform-sagemaker-notebook-instance
 
 ## About
 
-VS Code devcontainer boilerplate for Terraform including:
-
-- tfenv
-- tgenv
-- terraform
-- terragrunt
-- tflint
-- tfupdate
-- terraform VSCode extentions
+deploy SageMaker Notebook Instance using Terraform
 
 ## Prerequisite
 

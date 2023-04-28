@@ -1,5 +1,5 @@
 resource "aws_s3_bucket" "sagemaker_notebook_index" {
-  bucket        = "sagemaker-notebook-index"
+  bucket        = "${var.project}-bucket"
   force_destroy = true
 }
 

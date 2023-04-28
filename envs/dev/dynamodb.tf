@@ -1,5 +1,5 @@
 resource "aws_dynamodb_table" "sagemaker_notebook_table" {
-  name         = "sagemaker_notebook"
+  name         = "${var.project}-table"
   billing_mode = "PAY_PER_REQUEST"
   hash_key     = "SessionId"
   attribute {

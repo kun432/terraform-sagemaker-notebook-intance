@@ -26,8 +26,10 @@ data "aws_iam_policy_document" "sagemaker_notebook_policy" {
     actions = [
       "s3:GetObject",
       "s3:PutObject",
+      "s3:ListBucket",
     ]
     resources = [
+      "${aws_s3_bucket.sagemaker_notebook_index.arn}",
       "${aws_s3_bucket.sagemaker_notebook_index.arn}/*"
     ]
   }

@@ -30,5 +30,24 @@ open with VSCode.
 $ code .
 ```
 
-Finally, reopen in container in VSCode.
+then, reopen in container in VSCode.
 
+next, open terminal in VSCode and deploy resources.
+
+```shell
+$ cd envs/dev
+$ terragrunt init
+$ terragrunt apply
+```
+
+open AWS management console, go to SageMaker notebooks instances menu, and open  jupyter notebook/lab.
+
+For clean,
+
+```shell
+$ terragrunt destroy
+```
+
+## ToDo
+
+- add VPC and EFS (because notebook instance has only small-sized disk) and set LifeCycle to use it.
